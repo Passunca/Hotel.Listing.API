@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using HotelListing.API.Contracts;
 using HotelListing.API.Models.Users;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelListing.API.Controllers;
@@ -9,16 +10,15 @@ namespace HotelListing.API.Controllers;
 [ApiController]
 public class AccountController : Controller
 {
-    private readonly IMapper _mapper;
-    public IAuthManager _AuthManager { get; }
+    public IAuthManager _authManager { get; }
 
 
-    public AccountController(IMapper mapper, IAuthManager authManager)
+    public AccountController(IAuthManager authManager)
     {
-        this._mapper = mapper;
-        this._AuthManager = authManager;
+        this._authManager = authManager;
     }
 
+    // POST: api/Account/register
     [HttpPost]
     [Route("register")]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -26,11 +26,11 @@ public class AccountController : Controller
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult> Register([FromBody] ApiUserDto apiUserDto)
     {
-        var errors = await _AuthManager.Register(apiUserDto);
+        var errors = await _authManager.Register(apiUserDto);
 
-        if (errors.Any()) 
+        if (errors.Any())
         {
-            foreach (var error in errors) 
+            foreach (var error in errors)
             {
                 ModelState.AddModelError(error.Code, error.Description);
             }
@@ -39,5 +39,41 @@ public class AccountController : Controller
         }
 
         return Ok();
+    }
+
+    // POST: api/Account/login
+    [HttpPost]
+    [Route("login")]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
+    {
+        var authResponse = await _authManager.Login(loginDto);
+
+        if (authResponse == null)
+        {
+            return Unauthorized();
+        }
+
+        return Ok(authResponse);
+    }
+
+    // POST: api/Account/refreshtoken
+    [HttpPost]
+    [Route("refreshtoken")]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<ActionResult> RefreshToken([FromBody] AuthResponseDto authResponseDto)
+    {
+        var authResponse = await _authManager.VerifyRefreshToken(authResponseDto);
+
+        if (authResponse == null)
+        {
+            return Unauthorized();
+        }
+
+        return Ok(authResponse);
     }
 }

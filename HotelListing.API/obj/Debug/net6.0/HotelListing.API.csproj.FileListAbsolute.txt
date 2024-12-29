@@ -317,3 +317,4 @@ D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API\obj\Debug\net6.0\HotelList
 D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API\obj\Debug\net6.0\HotelListing.API.genruntimeconfig.cache
 D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API\obj\Debug\net6.0\ref\HotelListing.API.dll
 D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API\obj\Debug\net6.0\HotelListing.API.sourcelink.json
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

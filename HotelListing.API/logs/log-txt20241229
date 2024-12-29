@@ -1,0 +1,20 @@
+2024-12-29 07:40:52.815 +00:00 [INF] Now listening on: https://localhost:7152
+2024-12-29 07:40:52.848 +00:00 [INF] Now listening on: http://localhost:5253
+2024-12-29 07:40:52.961 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-29 07:40:52.975 +00:00 [INF] Hosting environment: Development
+2024-12-29 07:40:52.976 +00:00 [INF] Content root path: D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API\
+2024-12-29 07:40:54.402 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Account/register" for actions - HotelListing.API.Controllers.AccountController.Register (HotelListing.API),HotelListing.API.Controllers.AccountController.RegisterAdmin (HotelListing.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-12-29 07:43:17.299 +00:00 [INF] Now listening on: https://localhost:7152
+2024-12-29 07:43:17.328 +00:00 [INF] Now listening on: http://localhost:5253
+2024-12-29 07:43:17.441 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-29 07:43:17.442 +00:00 [INF] Hosting environment: Development
+2024-12-29 07:43:17.443 +00:00 [INF] Content root path: D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API\
