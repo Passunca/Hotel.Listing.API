@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HotelListing.API.Contracts;
+using HotelListing.API.Controllers;
 using HotelListing.API.Data;
 using HotelListing.API.Models.Users;
 using Microsoft.AspNetCore.Identity;
@@ -14,6 +15,7 @@ namespace HotelListing.API.Repository
     {
         private readonly IMapper _mapper;
         public IConfiguration _configuration { get; }
+        private readonly ILogger<AuthManager> _logger;
 
         private readonly UserManager<ApiUser> _userManager;
         private ApiUser _user;
@@ -21,11 +23,12 @@ namespace HotelListing.API.Repository
         private const string _loginProvider = "HotelListingApi";
         private const string _refreshToken = "RefreshToken";
 
-        public AuthManager(IMapper mapper, IConfiguration configuration, UserManager<ApiUser> userManager)
+        public AuthManager(IMapper mapper, IConfiguration configuration, UserManager<ApiUser> userManager, ILogger<AuthManager> logger)
         {
             this._mapper = mapper;
             this._configuration = configuration;
             this._userManager = userManager;
+            this._logger = logger;
         }
 
         public UserManager<ApiUser> UserManager { get; }
@@ -47,15 +50,18 @@ namespace HotelListing.API.Repository
 
         public async Task<AuthResponseDto> Login(LoginDto loginDto)
         {
+            _logger.LogInformation($"Looking for user with email {loginDto.Email}");
             _user = await _userManager.FindByEmailAsync(loginDto.Email);
             bool IsValidUser = await _userManager.CheckPasswordAsync(_user, loginDto.Password);
 
             if (_user == null || !IsValidUser)
             {
+                _logger.LogWarning($"User with email {loginDto.Email} not found");
                 return null;
             }
 
             var token = await GenerateToken();
+            _logger.LogInformation($"Generated new token for user {loginDto.Email} | Token: {token}");
 
             return new AuthResponseDto { Token = token, UserId = _user.Id, RefreshToken = await CreateRefreshToken() };
         }
