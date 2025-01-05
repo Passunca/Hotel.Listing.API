@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using HotelListing.API.Contracts;
-using HotelListing.API.Models.Users;
+using HotelListing.API.Core.Contracts;
+using HotelListing.API.Core.Models.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

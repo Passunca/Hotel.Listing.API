@@ -9,17 +9,43 @@
     "Parameters": [
       {
         "Name": "loginDto",
-        "Type": "HotelListing.API.Models.Users.LoginDto",
+        "Type": "HotelListing.API.Core.Models.Users.LoginDto",
         "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=minimal; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=full; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=none; ver=1.0",
+          "application/json;odata.streaming=true; ver=1.0",
+          "application/json;odata.streaming=false; ver=1.0",
+          "application/json; ver=1.0",
+          "application/xml; ver=1.0",
+          "application/json; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/octet-stream; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/json; ver=1.0",
+          "text/json; ver=1.0"
         ],
         "StatusCode": 400
       },
@@ -45,17 +71,43 @@
     "Parameters": [
       {
         "Name": "authResponseDto",
-        "Type": "HotelListing.API.Models.Users.AuthResponseDto",
+        "Type": "HotelListing.API.Core.Models.Users.AuthResponseDto",
         "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=minimal; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=full; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=none; ver=1.0",
+          "application/json;odata.streaming=true; ver=1.0",
+          "application/json;odata.streaming=false; ver=1.0",
+          "application/json; ver=1.0",
+          "application/xml; ver=1.0",
+          "application/json; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/octet-stream; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/json; ver=1.0",
+          "text/json; ver=1.0"
         ],
         "StatusCode": 400
       },
@@ -81,17 +133,43 @@
     "Parameters": [
       {
         "Name": "apiUserDto",
-        "Type": "HotelListing.API.Models.Users.ApiUserDto",
+        "Type": "HotelListing.API.Core.Models.Users.ApiUserDto",
         "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=minimal; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=full; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=none; ver=1.0",
+          "application/json;odata.streaming=true; ver=1.0",
+          "application/json;odata.streaming=false; ver=1.0",
+          "application/json; ver=1.0",
+          "application/xml; ver=1.0",
+          "application/json; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/octet-stream; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/json; ver=1.0",
+          "text/json; ver=1.0"
         ],
         "StatusCode": 400
       },
@@ -109,19 +187,61 @@
   },
   {
     "ContainingType": "HotelListing.API.Controllers.CountriesController",
-    "Method": "GetCountries",
+    "Method": "GetPagedCountries",
     "RelativePath": "api/Countries",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "StartIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[HotelListing.API.Models.Country.GetCountryDto, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "HotelListing.API.Core.Models.PagedResult\u00601[[HotelListing.API.Core.Models.Country.GetCountryDto, HotelListing.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=minimal; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=full; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=none; ver=1.0",
+          "application/json;odata.streaming=true; ver=1.0",
+          "application/json;odata.streaming=false; ver=1.0",
+          "application/json; ver=1.0",
+          "application/xml; ver=1.0",
+          "application/json; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/octet-stream; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/json; ver=1.0",
+          "text/json; ver=1.0"
         ],
         "StatusCode": 200
       }
@@ -137,17 +257,43 @@
     "Parameters": [
       {
         "Name": "countryDto",
-        "Type": "HotelListing.API.Models.Country.CreateCountryDto",
+        "Type": "HotelListing.API.Core.Models.Country.CreateCountryDto",
         "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
         "Type": "HotelListing.API.Data.Country",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=minimal; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=full; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=none; ver=1.0",
+          "application/json;odata.streaming=true; ver=1.0",
+          "application/json;odata.streaming=false; ver=1.0",
+          "application/json; ver=1.0",
+          "application/xml; ver=1.0",
+          "application/json; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/octet-stream; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/json; ver=1.0",
+          "text/json; ver=1.0"
         ],
         "StatusCode": 200
       }
@@ -165,15 +311,41 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "HotelListing.API.Models.Country.GetCountryDetailsDto",
+        "Type": "HotelListing.API.Core.Models.Country.GetCountryDetailsDto",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=minimal; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=full; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=none; ver=1.0",
+          "application/json;odata.streaming=true; ver=1.0",
+          "application/json;odata.streaming=false; ver=1.0",
+          "application/json; ver=1.0",
+          "application/xml; ver=1.0",
+          "application/json; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/octet-stream; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/json; ver=1.0",
+          "text/json; ver=1.0"
         ],
         "StatusCode": 200
       }
@@ -194,8 +366,18 @@
       },
       {
         "Name": "updateCountryDto",
-        "Type": "HotelListing.API.Models.Country.UpdateCountryDto",
+        "Type": "HotelListing.API.Core.Models.Country.UpdateCountryDto",
         "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -212,6 +394,16 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -223,14 +415,56 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "StartIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[HotelListing.API.Models.Hotel.HotelDto, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "HotelListing.API.Core.Models.PagedResult\u00601[[HotelListing.API.Core.Models.Hotel.HotelDto, HotelListing.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=minimal; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=full; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=none; ver=1.0",
+          "application/json;odata.streaming=true; ver=1.0",
+          "application/json;odata.streaming=false; ver=1.0",
+          "application/json; ver=1.0",
+          "application/xml; ver=1.0",
+          "application/json; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/octet-stream; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/json; ver=1.0",
+          "text/json; ver=1.0"
         ],
         "StatusCode": 200
       }
@@ -246,17 +480,43 @@
     "Parameters": [
       {
         "Name": "hotelDto",
-        "Type": "HotelListing.API.Models.Hotel.CreateHotelDto",
+        "Type": "HotelListing.API.Core.Models.Hotel.CreateHotelDto",
         "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
         "Type": "HotelListing.API.Data.Hotel",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=minimal; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=full; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=none; ver=1.0",
+          "application/json;odata.streaming=true; ver=1.0",
+          "application/json;odata.streaming=false; ver=1.0",
+          "application/json; ver=1.0",
+          "application/xml; ver=1.0",
+          "application/json; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/octet-stream; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/json; ver=1.0",
+          "text/json; ver=1.0"
         ],
         "StatusCode": 200
       }
@@ -274,15 +534,41 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "HotelListing.API.Models.Hotel.HotelDto",
+        "Type": "HotelListing.API.Core.Models.Hotel.HotelDto",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=minimal; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=full; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=none; ver=1.0",
+          "application/json;odata.streaming=true; ver=1.0",
+          "application/json;odata.streaming=false; ver=1.0",
+          "application/json; ver=1.0",
+          "application/xml; ver=1.0",
+          "application/json; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/octet-stream; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/json; ver=1.0",
+          "text/json; ver=1.0"
         ],
         "StatusCode": 200
       }
@@ -303,8 +589,18 @@
       },
       {
         "Name": "hotelDto",
-        "Type": "HotelListing.API.Models.Hotel.UpdateHotelDto",
+        "Type": "HotelListing.API.Core.Models.Hotel.UpdateHotelDto",
         "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -321,6 +617,16 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

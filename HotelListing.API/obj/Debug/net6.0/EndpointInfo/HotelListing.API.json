@@ -10,19 +10,100 @@
         "tags": [
           "Account"
         ],
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/ApiUserDto"
               }
             },
-            "text/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/ApiUserDto"
               }
             },
-            "application/*+json": {
+            "application/json;odata.metadata=minimal; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "application/json;odata.metadata=full; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "application/json;odata.metadata=none; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "application/json;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "application/json;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "application/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "application/xml; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "text/plain; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "text/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiUserDto"
+              }
+            },
+            "application/*+json; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/ApiUserDto"
               }
@@ -33,17 +114,82 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
                 }
               },
-              "application/json": {
+              "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
                 }
               },
-              "text/json": {
+              "application/json;odata.metadata=minimal; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=full; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=none; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/xml; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/plain; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/octet-stream; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
                 }
@@ -64,19 +210,100 @@
         "tags": [
           "Account"
         ],
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/LoginDto"
               }
             },
-            "text/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/LoginDto"
               }
             },
-            "application/*+json": {
+            "application/json;odata.metadata=minimal; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/json;odata.metadata=full; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/json;odata.metadata=none; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/json;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/json;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/xml; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/plain; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/LoginDto"
               }
@@ -87,17 +314,82 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
                 }
               },
-              "application/json": {
+              "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
                 }
               },
-              "text/json": {
+              "application/json;odata.metadata=minimal; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=full; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=none; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/xml; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/plain; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/octet-stream; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
                 }
@@ -118,19 +410,100 @@
         "tags": [
           "Account"
         ],
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/AuthResponseDto"
               }
             },
-            "text/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/AuthResponseDto"
               }
             },
-            "application/*+json": {
+            "application/json;odata.metadata=minimal; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "application/json;odata.metadata=full; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "application/json;odata.metadata=none; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "application/json;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "application/json;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "application/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "application/xml; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "text/plain; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "text/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthResponseDto"
+              }
+            },
+            "application/*+json; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/AuthResponseDto"
               }
@@ -141,17 +514,82 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
                 }
               },
-              "application/json": {
+              "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
                 }
               },
-              "text/json": {
+              "application/json;odata.metadata=minimal; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=full; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.metadata=none; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/xml; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/plain; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/octet-stream; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
                 }
@@ -172,32 +610,128 @@
         "tags": [
           "Countries"
         ],
+        "parameters": [
+          {
+            "name": "StartIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetCountryDto"
-                  }
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
                 }
               },
-              "application/json": {
+              "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetCountryDto"
-                  }
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
                 }
               },
-              "text/json": {
+              "application/json;odata.metadata=minimal; ver=1.0": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetCountryDto"
-                  }
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=full; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=none; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "application/json;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "application/json;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "application/json; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "application/xml; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "text/plain; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "application/octet-stream; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
+                }
+              },
+              "text/json; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDtoPagedResult"
                 }
               }
             }
@@ -208,19 +742,100 @@
         "tags": [
           "Countries"
         ],
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateCountryDto"
               }
             },
-            "text/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateCountryDto"
               }
             },
-            "application/*+json": {
+            "application/json;odata.metadata=minimal; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=full; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=none; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "application/json;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "application/json;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "application/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "application/xml; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "text/plain; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "text/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCountryDto"
+              }
+            },
+            "application/*+json; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateCountryDto"
               }
@@ -231,17 +846,82 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/Country"
                 }
               },
-              "application/json": {
+              "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/Country"
                 }
               },
-              "text/json": {
+              "application/json;odata.metadata=minimal; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "application/json;odata.metadata=full; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "application/json;odata.metadata=none; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "application/json;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "application/json;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "application/json; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "application/xml; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "text/plain; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "application/octet-stream; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              },
+              "text/json; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/Country"
                 }
@@ -265,23 +945,102 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/GetCountryDetailsDto"
                 }
               },
-              "application/json": {
+              "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/GetCountryDetailsDto"
                 }
               },
-              "text/json": {
+              "application/json;odata.metadata=minimal; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "application/json;odata.metadata=full; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "application/json;odata.metadata=none; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "application/json;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "application/json;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "application/json; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "application/xml; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "text/plain; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "application/octet-stream; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCountryDetailsDto"
+                }
+              },
+              "text/json; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/GetCountryDetailsDto"
                 }
@@ -303,21 +1062,100 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateCountryDto"
               }
             },
-            "text/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateCountryDto"
               }
             },
-            "application/*+json": {
+            "application/json;odata.metadata=minimal; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=full; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "application/json;odata.metadata=none; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "application/json;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "application/json;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "application/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "application/xml; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "text/plain; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "text/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCountryDto"
+              }
+            },
+            "application/*+json; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateCountryDto"
               }
@@ -343,6 +1181,20 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -357,32 +1209,128 @@
         "tags": [
           "Hotels"
         ],
+        "parameters": [
+          {
+            "name": "StartIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/HotelDto"
-                  }
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
                 }
               },
-              "application/json": {
+              "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/HotelDto"
-                  }
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
                 }
               },
-              "text/json": {
+              "application/json;odata.metadata=minimal; ver=1.0": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/HotelDto"
-                  }
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=full; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "application/json;odata.metadata=none; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "application/json;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "application/json;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "application/json; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "application/xml; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "text/plain; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "application/octet-stream; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
+                }
+              },
+              "text/json; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDtoPagedResult"
                 }
               }
             }
@@ -393,19 +1341,100 @@
         "tags": [
           "Hotels"
         ],
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateHotelDto"
               }
             },
-            "text/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateHotelDto"
               }
             },
-            "application/*+json": {
+            "application/json;odata.metadata=minimal; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=full; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=none; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "application/json;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "application/json;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "application/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "application/xml; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "text/plain; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "text/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelDto"
+              }
+            },
+            "application/*+json; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateHotelDto"
               }
@@ -416,17 +1445,82 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/Hotel"
                 }
               },
-              "application/json": {
+              "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/Hotel"
                 }
               },
-              "text/json": {
+              "application/json;odata.metadata=minimal; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "application/json;odata.metadata=full; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "application/json;odata.metadata=none; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "application/json;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "application/json;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "application/json; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "application/xml; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "text/plain; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "application/octet-stream; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              },
+              "text/json; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/Hotel"
                 }
@@ -450,23 +1544,102 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/HotelDto"
                 }
               },
-              "application/json": {
+              "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/HotelDto"
                 }
               },
-              "text/json": {
+              "application/json;odata.metadata=minimal; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "application/json;odata.metadata=full; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "application/json;odata.metadata=none; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "application/json;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "application/json;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "application/json; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "application/xml; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "text/plain; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "application/octet-stream; ver=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/HotelDto"
+                }
+              },
+              "text/json; ver=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/HotelDto"
                 }
@@ -488,21 +1661,100 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateHotelDto"
               }
             },
-            "text/json": {
+            "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateHotelDto"
               }
             },
-            "application/*+json": {
+            "application/json;odata.metadata=minimal; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=full; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "application/json;odata.metadata=none; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "application/json;odata.streaming=true; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "application/json;odata.streaming=false; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "application/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "application/xml; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "text/plain; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "text/json; ver=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelDto"
+              }
+            },
+            "application/*+json; ver=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateHotelDto"
               }
@@ -527,6 +1779,20 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -739,6 +2005,31 @@
         },
         "additionalProperties": false
       },
+      "GetCountryDtoPagedResult": {
+        "type": "object",
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "recordNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetCountryDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Hotel": {
         "type": "object",
         "properties": {
@@ -798,6 +2089,31 @@
           "id": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HotelDtoPagedResult": {
+        "type": "object",
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "recordNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HotelDto"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
