@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using HotelListing.API.Core.Contracts;
+﻿using HotelListing.API.Core.Contracts;
 using HotelListing.API.Core.Models.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +7,8 @@ namespace HotelListing.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[AllowAnonymous]
+[Authorize]
 public class AccountController : Controller
 {
     private readonly ILogger<AccountController> _logger;

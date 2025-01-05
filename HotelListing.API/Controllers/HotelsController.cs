@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using HotelListing.API.Data;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using HotelListing.API.Core.Contracts;
@@ -11,7 +10,7 @@ namespace HotelListing.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class HotelsController : ControllerBase
     {
         private readonly IMapper _mapper;
@@ -73,7 +72,7 @@ namespace HotelListing.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Hotel>> PostHotel(CreateHotelDto hotelDto)
+        public async Task<ActionResult<HotelDto>> PostHotel(CreateHotelDto hotelDto)
         {
             var hotel = await _hotelsRepository.AddAsync< CreateHotelDto,HotelDto>(hotelDto);
             return CreatedAtAction(nameof(GetHotel), new { id = hotel.Id }, hotel);

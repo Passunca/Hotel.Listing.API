@@ -256,7 +256,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "countryDto",
+        "Name": "createCountryDto",
         "Type": "HotelListing.API.Core.Models.Country.CreateCountryDto",
         "IsRequired": true
       },
@@ -273,7 +273,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "HotelListing.API.Data.Country",
+        "Type": "HotelListing.API.Core.Models.Country.GetCountryDto",
         "MediaTypes": [
           "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
           "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
@@ -409,6 +409,53 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HotelListing.API.Controllers.CountriesController",
+    "Method": "GetCountries",
+    "RelativePath": "api/Countries/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HotelListing.API.Core.Models.Country.GetCountryDto, HotelListing.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=minimal; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=full; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=none; ver=1.0",
+          "application/json;odata.streaming=true; ver=1.0",
+          "application/json;odata.streaming=false; ver=1.0",
+          "application/json; ver=1.0",
+          "application/xml; ver=1.0",
+          "application/json; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/octet-stream; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/json; ver=1.0",
+          "text/json; ver=1.0"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "HotelListing.API.Controllers.HotelsController",
     "Method": "GetHotels",
     "RelativePath": "api/Hotels",
@@ -496,7 +543,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "HotelListing.API.Data.Hotel",
+        "Type": "HotelListing.API.Core.Models.Hotel.HotelDto",
         "MediaTypes": [
           "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
           "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
@@ -630,5 +677,52 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelListing.API.Controllers.HotelsController",
+    "Method": "GetHotels",
+    "RelativePath": "api/Hotels/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "X-Version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HotelListing.API.Core.Models.Hotel.HotelDto, HotelListing.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=minimal; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=full;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=full; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=true; ver=1.0",
+          "application/json;odata.metadata=none;odata.streaming=false; ver=1.0",
+          "application/json;odata.metadata=none; ver=1.0",
+          "application/json;odata.streaming=true; ver=1.0",
+          "application/json;odata.streaming=false; ver=1.0",
+          "application/json; ver=1.0",
+          "application/xml; ver=1.0",
+          "application/json; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/octet-stream; ver=1.0",
+          "text/plain; ver=1.0",
+          "application/json; ver=1.0",
+          "text/json; ver=1.0"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

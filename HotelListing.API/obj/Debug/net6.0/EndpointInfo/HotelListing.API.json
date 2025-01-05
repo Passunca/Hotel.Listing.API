@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "HotelListing.API",
-    "version": "1.0"
+    "title": "Hotel Listing API",
+    "version": "v1"
   },
   "paths": {
     "/api/Account/register": {
@@ -605,6 +605,164 @@
         }
       }
     },
+    "/api/Countries/GetAll": {
+      "get": {
+        "tags": [
+          "Countries"
+        ],
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=minimal; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=full; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=none; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/json;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/json;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/json; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/xml; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "text/plain; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "application/octet-stream; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              },
+              "text/json; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetCountryDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Countries": {
       "get": {
         "tags": [
@@ -848,82 +1006,82 @@
             "content": {
               "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/json;odata.metadata=minimal; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/json;odata.metadata=full; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/json;odata.metadata=none; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/json;odata.streaming=true; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/json;odata.streaming=false; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/json; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/xml; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "text/plain; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "application/octet-stream; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               },
               "text/json; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/GetCountryDto"
                 }
               }
             }
@@ -1204,6 +1362,164 @@
         }
       }
     },
+    "/api/Hotels/GetAll": {
+      "get": {
+        "tags": [
+          "Hotels"
+        ],
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=minimal; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=full; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/json;odata.metadata=none; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/json;odata.streaming=true; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/json;odata.streaming=false; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/json; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/xml; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "text/plain; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "application/octet-stream; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              },
+              "text/json; ver=1.0": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HotelDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Hotels": {
       "get": {
         "tags": [
@@ -1447,82 +1763,82 @@
             "content": {
               "application/json;odata.metadata=minimal;odata.streaming=true; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/json;odata.metadata=minimal;odata.streaming=false; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/json;odata.metadata=minimal; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/json;odata.metadata=full;odata.streaming=true; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/json;odata.metadata=full;odata.streaming=false; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/json;odata.metadata=full; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/json;odata.metadata=none;odata.streaming=true; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/json;odata.metadata=none;odata.streaming=false; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/json;odata.metadata=none; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/json;odata.streaming=true; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/json;odata.streaming=false; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/json; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/xml; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "text/plain; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "application/octet-stream; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               },
               "text/json; ver=1.0": {
                 "schema": {
-                  "$ref": "#/components/schemas/Hotel"
+                  "$ref": "#/components/schemas/HotelDto"
                 }
               }
             }
@@ -1884,31 +2200,6 @@
         },
         "additionalProperties": false
       },
-      "Country": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "shortName": {
-            "type": "string",
-            "nullable": true
-          },
-          "hotels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Hotel"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "CreateCountryDto": {
         "required": [
           "name"
@@ -2026,35 +2317,6 @@
               "$ref": "#/components/schemas/GetCountryDto"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Hotel": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "address": {
-            "type": "string",
-            "nullable": true
-          },
-          "rating": {
-            "type": "number",
-            "format": "double"
-          },
-          "countryId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "country": {
-            "$ref": "#/components/schemas/Country"
           }
         },
         "additionalProperties": false
@@ -2222,6 +2484,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using Bearer schime.\r\n                        Enter 'Bearer [space] and then your token in the text input below.\r\n                        Example: 'Bearer 124124124'",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

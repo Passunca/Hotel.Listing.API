@@ -1,0 +1,16 @@
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\bin\Debug\net6.0\HotelListing.API.Core.deps.json
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\bin\Debug\net6.0\HotelListing.API.Core.dll
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\bin\Debug\net6.0\HotelListing.API.Core.pdb
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\bin\Debug\net6.0\HotelListing.API.Data.dll
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\bin\Debug\net6.0\HotelListing.API.Data.pdb
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\obj\Debug\net6.0\HotelListing.API.Core.csproj.AssemblyReference.cache
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\obj\Debug\net6.0\HotelListing.API.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\obj\Debug\net6.0\HotelListing.API.Core.AssemblyInfoInputs.cache
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\obj\Debug\net6.0\HotelListing.API.Core.AssemblyInfo.cs
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\obj\Debug\net6.0\HotelListing.API.Core.csproj.CoreCompileInputs.cache
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\obj\Debug\net6.0\HotelListing.API.Core.sourcelink.json
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\obj\Debug\net6.0\HotelLis.40365846.Up2Date
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\obj\Debug\net6.0\HotelListing.API.Core.dll
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\obj\Debug\net6.0\refint\HotelListing.API.Core.dll
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\obj\Debug\net6.0\HotelListing.API.Core.pdb
+D:\Projects\.Net\HotelListingAPI.NET\HotelListing.API.Core\obj\Debug\net6.0\ref\HotelListing.API.Core.dll
