@@ -1,6 +1,6 @@
 Project based on Udemy Course - [Ultimate ASP.NET Core Web API Development Guide](https://www.udemy.com/course/ultimate-aspnet-5-web-api-development-guide) By Trevoir Williams
 
-Skills worked on 
+Skills worked on:
 - Build A Data Driven API using Entity Framework Core
 - How to Build RESTful APIs with proper practices
 - Configure Cross-Origin Resource Sharing (CORS)
